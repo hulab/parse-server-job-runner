@@ -11,12 +11,13 @@ exports.handler = function(event, context, callback) {
   Parse.initialize(process.env.PARSE_APPLICATION_ID, undefined, process.env.PARSE_MASTER_KEY);
   Parse.serverURL = process.env.PARSE_SERVER_URL;
 
-  JobSchedule.run().then((result) => {
-    return callback ? callback(null, result) : result;
-  })
-  .catch((error) => {
-    return callback ? callback(error) : error;
-  });
+  JobSchedule.run()
+    .then((result) => {
+      return callback ? callback(null, result) : result;
+    })
+    .catch((error) => {
+      return callback ? callback(error) : error;
+    });
 };
 
 
