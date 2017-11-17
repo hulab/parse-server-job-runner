@@ -7,7 +7,7 @@
     "lint": "eslint --cache ./",
     "pretest": "npm run lint",
     "test": "nyc jasmine",
-    "start": "./bin/parse-server-job-runner"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,7 @@
   },
   "homepage": "https://github.com/ampme/parse-server-job-runner#readme",
   "dependencies": {
-    "debug": "^2.6.8",
-    "parse": "^1.9.2",
+    "parse": "^1.10.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
   },
@@ -36,7 +35,6 @@
     "jasmine-spec-reporter": "^4.1.0",
     "mongodb-runner": "^3.5.0",
     "nyc": "^11.0.2",
-    "parse-server": "parse-community/parse-server#latest",
-    "request-promise": "^4.2.1"
+    "parse-server": "parse-community/parse-server#latest"
   }
 }
