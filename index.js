@@ -15,6 +15,3 @@ exports.handler = function(event, context, callback) {
       return callback ? callback(error) : error;
     });
 };
-
-
-exports.handler(undefined,undefined,function (error, result){console.log(error?error:result)});
